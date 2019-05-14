@@ -13,7 +13,7 @@ package main
 import (
     "log"
     "time"
-    "git.xiaojukeji.com/nuwa/gorm"
+    "github.com/jinzhu/gorm"
     _ "github.com/go-sql-driver/mysql"
 )
 // 默认表名是products， Table 方法可以指定表名
