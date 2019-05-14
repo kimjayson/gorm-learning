@@ -506,3 +506,27 @@ for rows.Next() {
 
 ```
 
+## 六、事务
+
+参考grom文档
+
+```
+
+6.1. 执行事务
+
+// 开始事务
+tx := db.Begin()
+
+// 在事务中做一些数据库操作（从这一点使用'tx'，而不是'db'）
+tx.Create(...)
+tx.Find(...)
+
+// do something...
+
+// 发生错误时回滚事务
+tx.Rollback()
+
+// 或提交事务
+tx.Commit()
+
+```
